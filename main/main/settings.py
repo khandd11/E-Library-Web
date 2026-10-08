@@ -32,6 +32,13 @@ AUTH_USER_MODEL = "customUser.CustomUser"
 
 # Application definition
 
+REST_FRAMEWORK = {
+    "DEFAULT_PAGINATION_CLASS":
+        "rest_framework.pagination.PageNumberPagination",
+
+    "PAGE_SIZE": 10,
+}
+
 INSTALLED_APPS = [
     # Django apps
     'django.contrib.admin',
@@ -91,10 +98,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'eLibDB',
-        'USER' : 'root',
+        'USER': 'root',
         'PASSWORD': 'root',
-        'HOST' : 'localhost',
-        'PORT' : '3306',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
 
